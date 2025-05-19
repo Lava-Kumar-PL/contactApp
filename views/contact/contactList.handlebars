@@ -1,0 +1,53 @@
+<div class="list">
+  <h1>Your Contact list</h1>
+
+  <section>
+    <form action="/contact/search" method="post">
+      <select name="field" id="field">
+        <option value="Name">Name</option>
+        <option value="email">email</option>
+        <option value="MobileNo">MobileNo</option>
+      </select>
+      <input type="text" id="search" placeholder="Search for contacts..." name="search" required autocomplete="off"/>
+      <button type="submit"><i
+          class="fa-solid fa-magnifying-glass"
+        ></i></button>
+    </form>
+
+    <a href="/contact/addContact">
+      <button class="addCon">Add New Contact
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </a>
+  </section>
+
+  <h1>List</h1>
+  {{#if fullList}}
+  <form action="/contact/list">
+    <input id="fullList" type="submit" value="Full list">
+  </form>
+  {{/if}}
+  <div class="contactContainer">
+    {{#each contactsList}}
+      <div class="contactCard">
+        <h3> {{this.firstName}} {{this.lastName}}</h3>
+        <p><span>email: </span>{{this.email}}</p>
+        <p><span>Phnoe number:</span> {{this.phoneNumber}}</p>
+        <p><span>Address :</span>{{this.address}}</p>
+        <div class="buttons">
+          <a href="edit/{{this._id}}"> <button class="editbtn">edit</button> </a>
+          <button data-id="{{this._id}}" class="deletebtn">delete</button>
+        </div>
+        <div class="confirm hidden" id="confirm-{{this._id}}"><p>do you want permanently delete this contact </p>
+         <div class="reply">
+           <a href="/contact/delete/{{this._id}}"><button id="yes" >Yes</button></a>
+          <button id="no" class="nobtn">No</button>
+         </div>
+
+        </div>
+      </div>
+    {{else}}
+      <h2>No contacts</h2>
+    {{/each}}
+  </div>
+</div>

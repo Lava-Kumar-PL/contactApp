@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  padding: 15px 130px 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+nav > .logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav > ul > li {
+  list-style: none;
+  font-size: 17px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+#heading {
+  margin: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+#tagline {
+  margin: 10px;
+  margin-left: 120px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#start {
+  margin: 10px;
+  margin-left: 120px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+#btn {
+  margin: 10px;
+  margin-left: 120px;
+  margin-top: 20px;
+  font-weight: 200;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 42px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+#btn:hover {
+  background-color: #00a500;
+  color: rgb(255, 255, 255);
+}
+
+/*! list page */
+.list {
+  /* height: 100%; */
+  height: 100%;
+  width: 80vw;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 10px;
+}
+.list > h1 {
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.list > section {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.list > section > form > #search {
+  height: 50px;
+  width: 400px;
+  font-size: 25px;
+  border-radius: 30px;
+  border: none;
+  padding: 0px 0px 0px 18px;
+}
+
+.list > section > form > #search:focus {
+  border: none;
+  border-color: black;
+  outline: black;
+}
+
+.list > section > form {
+  position: relative;
+}
+.list>section>form>select{
+  font-size: 28px;
+  padding: 4px 7px;
+  outline: black;
+  border-radius: 7px;
+  margin: 5px 5px 0 0;
+}
+
+.list > section > form > button {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  background-color: transparent;
+  border: none;
+}
+
+.list > section > form > button > .fa-solid {
+  font-size: 25px;
+}
+
+.list > section > a > button {
+  background-color: rgb(34, 159, 34);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.list>form>#fullList{
+  background-color: orange;
+  font-size: 18px;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+.contactContainer {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  /* border: white 3px solid; */
+  border-radius: 20px;
+  padding: 20px 20px;
+  flex-wrap: wrap;
+  gap: 30px 40px;
+}
+
+.contactContainer > .contactCard {
+  width: 30%;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0 20px 20px;
+  border-radius: 15px;
+}
+
+.contactContainer > .contactCard > h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: rgb(143, 221, 249);
+}
+
+.contactContainer > .contactCard > p{
+  font-size: 20px;
+}
+
+.contactContainer > .contactCard > p > span {
+  color: orange;
+}
+.contactContainer > .contactCard > .buttons {
+  padding: 10px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.contactContainer > .contactCard > .buttons > button,
+.editbtn {
+  font-size: 23px;
+  padding: 6px 25px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contactContainer > .contactCard > .buttons > a > .editbtn {
+  background-color: rgba(0, 0, 209, 0.918);
+}
+
+.contactContainer > .contactCard > .buttons > .deletebtn {
+  background-color: rgba(255, 1, 1, 0.858);
+}
+
+.contactContainer > .contactCard > .confirm {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  z-index: 100;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.contactContainer > .contactCard > .confirm > .reply {
+  display: flex;
+  gap: 20px;
+}
+
+.contactContainer > .contactCard > .confirm > .reply button {
+  font-size: 25px;
+  padding: 4px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contactContainer > .contactCard >.hidden{
+  display: none;
+}
+.contactContainer > .contactCard > .confirm > .reply > #no {
+  background-color: green;
+}
+.contactContainer > .contactCard > .confirm > .reply > a > #yes {
+  background-color: red;
+}
+
+.addCon {
+  gap: 40px;
+}
+.addCon > form > label {
+  font-size: 20px;
+  color: aqua;
+}
+
+.addCon > form > input {
+  height: 35px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+.addCon > form > button {
+  background-color: rgb(37, 164, 37);
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.editConn {
+  gap: 40px;
+}
+.editConn > form > label {
+  font-size: 20px;
+  color: aqua;
+}
+
+.editConn > form > input {
+  height: 35px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+.editConn > form > button {
+  background-color: rgb(35, 32, 188);
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+}
